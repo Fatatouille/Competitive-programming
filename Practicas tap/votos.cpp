@@ -11,17 +11,18 @@ int main(){
         if (v[i]>maximo1){
             maximo2=maximo1;
             maximo1=v[i];
-        }else if(v[i]>maximo2){
+        }else{
+            if(v[i]>maximo2){
             maximo2=v[i];
+            }
         }
     }
     porcentaje1=(maximo1/total)*100;
     porcentaje2=(maximo2/total)*100;
-    if(porcentaje1>45 || (porcentaje1-porcentaje2)>= 10){
-        a=1;
+    if(porcentaje1>=45 || (porcentaje1>=40 && ((porcentaje1-porcentaje2)>= 10))){
+        cout << 1;
     }else{
-        a=2;
+        cout << 2;
     }
-    cout << a;
     return 0;
 }
