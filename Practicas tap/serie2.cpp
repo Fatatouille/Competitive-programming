@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
     int N=1, M=1,suma, i, anterior, a, b;
-    string C, num[100];
+    string C;
     while (N>0 && M>0){
         cin >> N >> M;
         if(N==-1 && M==-1){
@@ -11,6 +11,7 @@ int main(){
         }
         cin.ignore();
         getline(cin, C);
+        string num[N];
         suma=0;
         a=0;
         for (i=0; i<C.size(); i++){
